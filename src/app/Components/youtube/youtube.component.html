@@ -1,0 +1,16 @@
+<form (submit)="GetData(search.value)">
+  <label for="search"></label>
+  <input type="text" #search>
+  <input type="submit" value="Find">
+</form>
+
+
+
+<div *ngFor = "let post of posts">
+  <h4>{{post.etag}}</h4>
+  <p>{{post.kind}}</p>
+  <span><p [innerHTML]="updateVideoUrl(post.id.videoId)"></p></span>
+ 
+</div>
+
+
